@@ -1,8 +1,20 @@
 
 exports.run = (client, message, args) => {
     const Discord = require("discord.js");
-    let rlist = message.guild.roles.map(e=>e.name()).join(" ")
-    message.channel.send( rlist  ).catch(console.error);
+    let create = args.slice(0).join(" ");
+   
+   //message.channel.send("test" + create)
+    if(create !== "create")
+    {
+        message.channel.send("Veuillez rajouter create comme premier argument pour créer un sondage")
+    }
+    if(create == "create")
+    {  let channel1 = args.slice(0);
+        message.channel.send("Parfait vous avez commencer la création d'un sondage ! !! <:PandaMagician:385523847342063619> <:PandaMagician:385523847342063619> \nVeuillez spécifiez le channel dans le quel vous voulez le sondage")
+        if(channel1)
+        {message.channel.send("Le sondage aura lieu dans" + channel1)}
+    }
+
   /*  const embed = new Discord.RichEmbed()
     .setTitle("Role du serveur : " + message.guild.name)
    // .setAuthor(message.author.username, message.author.avatarURL)

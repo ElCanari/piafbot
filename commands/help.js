@@ -39,6 +39,7 @@ const embed = new Discord.RichEmbed()
   .addField("p!8ball", "Le destin")
   .addField("p!8roll", "Un nombre entre 1 et 6")
   .addField("p!elist", "Liste des emojis")
+  .addField("p!invite", "Une invite")
   .addField("p!cookie", "Donne un cookie")
   .addField("p!remindme", "Un remind");
   
