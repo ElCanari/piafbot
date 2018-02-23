@@ -33,7 +33,7 @@ client.on("message", message => {
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.username}!`);
-
+  client.user.setGame('p!help')
   console.log("I am ready!");
 });
 client.login(config.token);
